@@ -59,8 +59,8 @@ class DataTransformation:
             logging.info("Reading the train and test file")
 
             # Drop 'Serial No.' if it's present in the datasets
-            train_df = train_df.drop(columns=['Serial No.'], errors='ignore')
-            test_df = test_df.drop(columns=['Serial No.'], errors='ignore')
+           # train_df = train_df.drop(columns=['Serial No.'], errors='ignore')
+           # test_df = test_df.drop(columns=['Serial No.'], errors='ignore')
 
             preprocessing_obj=self.get_data_transformer_object()
 

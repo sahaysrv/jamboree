@@ -10,13 +10,13 @@ class PredictPipeline:
 
     def predict(self,features):
         try:
-            model_path='artifacts\model.pkl'
-            preprocessor_path='artifacts\preprocessor.pkl'
+            model_path='artifacts\\model.pkl'
+            preprocessor_path='artifacts\\preprocessor.pkl'
             model=load_object(file_path=model_path)
             preprocessor=load_object(file_path=preprocessor_path)
 
              # Ensure "Serial No." is dropped before preprocessing
-            features = features.drop(columns=['Serial No.'], errors='ignore') 
+           # features = features.drop(columns=['Serial No.'], errors='ignore') 
 
             data_scaled=preprocessor.transform(features)
             preds=model.predict(data_scaled)
