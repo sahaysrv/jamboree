@@ -1,0 +1,53 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Jamboree Admissions Prediction Indicator</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Jamboree Admissions Prediction Indicator</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">GRE Score out of 340</label>
+            <input class="form-control" type="number" name="GRE_Score"
+                placeholder="Enter your Gre Score" min='0' max='340' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">TOEFL Score out of 120</label>
+            <input class="form-control" type="number" name="TOEFL_Score"
+                placeholder="Enter your TOEFL Score" min='0' max='120' step="0.1" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">University Rating out of 5</label>
+            <input class="form-control" type="number" name="University_Rating"
+                placeholder="Enter your University Rating" min='0' max='5' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">SOP out of 5</label>
+            <input class="form-control" type="number" name="SOP"
+                placeholder="Enter your SOP" min='0' max='5' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">LOR out of 5</label>
+            <input class="form-control" type="number" name="LOR"
+                placeholder="Enter your LOR" min='0' max='5' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">CGPA out of 10</label>
+            <input class="form-control" type="number" name="CGPA"
+                placeholder="Enter your CGPA" min='0' max='10'step="0.1" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Research Paper Submission Status</label>
+            <input class="form-control" type="number" name="Research"
+                placeholder="Enter 1 if submitted and 0 otherwise" min='0' max='1'step="1" />
+        </div>                                
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict your Chance of Admit" required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction is {{results}}
+    </h2>
+   <body>
+</html>
