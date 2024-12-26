@@ -39,7 +39,7 @@ def predict_datapoint():
         # Initialize the prediction pipeline
         predict_pipeline = PredictPipeline()
         results = predict_pipeline.predict(pred_df)
-        results=r2_score=f"{r2_score * 100:.2f}%" 
+        
 
         # Render results on the page
         return render_template('home.html', results=results[0])
