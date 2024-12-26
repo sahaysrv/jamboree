@@ -38,7 +38,7 @@ def predict_datapoint():
 
         # Initialize the prediction pipeline
         predict_pipeline = PredictPipeline()
-        results = predict_pipeline.predict(pred_df)
+        results = round(predict_pipeline.predict(pred_df)*100,2)
         
 
         # Render results on the page
