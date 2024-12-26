@@ -21,7 +21,7 @@ class PredictPipeline:
 
             data_scaled=preprocessor.transform(features)
             preds=model.predict(data_scaled)
-            preds=f"{preds[0] * 100:.2f}%"
+        
             
             return preds
         except Exception as e:
