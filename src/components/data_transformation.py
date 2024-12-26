@@ -27,8 +27,7 @@ class DataTransformation:
         This fucntion is responsible for data transformation
         '''
         try:
-            numerical_columns=[
-                'GRE Score', 
+            numerical_columns=['GRE Score', 
                 'TOEFL Score', 
                 'University Rating', 
                 'SOP', 

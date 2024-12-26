@@ -10,6 +10,7 @@ class PredictPipeline:
 
     def predict(self,features):
         try:
+            
             model_path='artifacts\\model.pkl'
             preprocessor_path='artifacts\\preprocessor.pkl'
             model=load_object(file_path=model_path)
@@ -20,6 +21,8 @@ class PredictPipeline:
 
             data_scaled=preprocessor.transform(features)
             preds=model.predict(data_scaled)
+            preds=round(preds*100,2)
+            preds="{:.2f}%".format(preds)
             return preds
         except Exception as e:
             raise CustomException(e,sys)
